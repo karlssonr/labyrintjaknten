@@ -1,0 +1,217 @@
+body{
+    background-color: #1E3759;
+    margin: 0;
+    padding: 0;
+}
+
+.topmeny{
+    text-align: center;
+    background-color:#0B5E87;
+    color: white;
+    height: 65px;
+    width: 355px;
+    top: 50%;
+}
+.level{
+    float: left;
+    margin-top: 13px;
+    font-size: 30px;
+    color: #1FC23A;
+    font-family: 'Play', sans-serif;
+    margin-left: 15px;
+    /* width:30%; */
+}
+
+.iconrestart {
+    position: relative;
+    width: 31px;
+    height: 31px;
+    left: 200px;
+    top: 15px;
+    overflow: visible;
+    background-image: url(restart.png);
+    
+    
+}
+
+.iconpause {
+    position: relative;
+    width: 31px;
+    height: 31px;
+    
+    top: -16px;
+    overflow: visible;
+    left: 255px;
+    background-image: url(pause.png);
+    
+}
+
+
+#home{
+    position: relative;
+    width: 31px;
+    height: 31px;
+    
+    top: -47px;
+    overflow: visible;
+    left: 310px;
+    background-image: url(hem.png);
+}
+
+
+
+
+.lives{
+    float: left;
+    margin-top: 27px;
+    font-size: 25px;
+    color: #1FC23A;
+    /* font-family: 'Play', sans-serif; */
+    margin-left: 15px;
+    font-family: 'Press Start 2P', cursive;
+    
+}
+.hjärta{
+    float: left;
+    margin-top: 10px;
+    font-size: 45px;
+    color: #DB0909;
+    
+    margin-left: 5px;
+    
+}
+#spelruta{
+    width: 335px;
+    border: solid 3px #0B5E87;
+    /* background-color: rgb(131, 124, 124); */
+    position: relative;
+    height: 335px;
+    margin-top: 75px;
+    margin-left: 10px;
+    
+}
+.bild{
+    height: 330px;
+    width: 330px;
+}
+
+.pilupp{
+    position: relative;
+    font-size: 60px;
+    color:#1FC23A;
+    top: 0px;
+    left: 170px;
+
+}
+.pilupp a{
+    text-decoration: none;
+    color: #1FC23A;
+}
+.pilvänster{
+    position: relative;
+    font-size: 60px;
+    color:#1FC23A;
+    top: -10px;
+    left: 90px;
+    display: inline-block;
+    
+}
+.pilhöger{
+    position: relative;
+    font-size: 60px;
+    color:#1FC23A;
+    top: -10px;
+    left: 120px;
+    display: inline-block;
+}
+.pilner{
+    position: relative;
+    font-size: 60px;
+    color:#1FC23A;
+    top: 70px;
+    left: -20px;
+    display: inline-block;
+}
+
+
+.joystick{
+    position: relative;
+    background-image: url(joystick.svg);
+    height: 70px;
+    width: 70px;
+    left: 105px;
+    top: -5px;
+    display: inline-block;
+}
+.cat{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.marken{
+    background-image: url(grå.png);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    margin-bottom: 0px;
+    
+ 
+}
+.monster{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.wall{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+#spelruta > div {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    vertical-align: top;
+    
+}
+.bilder{
+    margin: 0px;
+}
+.mål{
+    background-color: rgb(3, 184, 12);
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.gameover{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(153, 173, 202);
+    font-family: 'Press Start 2P', cursive;
+    
+    z-index: 1000;
+    margin-top: 200px;
+    margin-left: 110px;
+    float: left;
+    position: fixed;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.finish {
+    width: 150px;
+    height: 40px;
+    background-color: rgb(153, 173, 202);
+    font-family: 'Press Start 2P', cursive;
+    
+    z-index: 1000;
+    margin-top: 200px;
+    margin-left: 110px;
+    float: left;
+    position: fixed;
+    text-align: center;
+    padding-top: 20px;
+
+}

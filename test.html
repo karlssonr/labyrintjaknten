@@ -1,0 +1,66 @@
+<html>
+<head>
+
+
+
+</head>
+
+<body>
+<div id="box">box</div>
+
+   
+   
+   <style>
+   #box {
+   position: absolute;
+   left:100px;
+   top:100px;
+   width:300px;
+   height:300px;
+   background:blue;
+   }
+   </style>
+   <script>
+
+    var topPos = 0;
+    var leftPos = 0;
+    var leftAdder = 1;
+    var topAdder = 1;
+    var id;
+   
+       function move() {  
+           clearInterval(id);
+           id = setInterval(frame, 3);
+   
+           function frame() {
+   
+           leftPos = leftPos + leftAdder;
+           topPos = topPos + topAdder; 
+           document.getElementById("box").style.left = leftPos + 'px'; 
+           document.getElementById("box").style.top = topPos + 'px'; 
+   
+           if (leftPos == 500) {
+               leftAdder = -1;  
+           }
+           if (topPos == 350) {
+               topAdder = -1;  
+           }
+           if (leftPos == 0) {
+               leftAdder = 1;  
+           }
+           if (topPos == 0) {
+               topAdder = 1;  
+           }  
+           }
+       }
+   
+       function stop(){
+           clearInterval(id);
+       }
+   
+   </script>
+</body>
+
+
+
+</html>
