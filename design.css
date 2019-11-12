@@ -81,11 +81,11 @@ body{
     
 }
 #spelruta{
-    width: 335px;
+    width: 321px;
     border: solid 3px #0B5E87;
     /* background-color: rgb(131, 124, 124); */
     position: relative;
-    height: 335px;
+    height: 322px;
     margin-top: 75px;
     margin-left: 10px;
     
@@ -96,52 +96,60 @@ body{
 }
 
 .pilupp{
-    position: relative;
+    position: fixed;
     font-size: 60px;
     color:#1FC23A;
-    top: 0px;
-    left: 170px;
-
+    top: 460px;
+    left: 156px;
+    z-index: 2;
 }
-.pilupp a{
+
+
+.pil{
     text-decoration: none;
     color: #1FC23A;
 }
 .pilvänster{
-    position: relative;
+    position: fixed;
     font-size: 60px;
     color:#1FC23A;
-    top: -10px;
-    left: 90px;
+    top: 542px;
+    left: 74px;
     display: inline-block;
+    z-index:  2;
+}
     
-}
+
 .pilhöger{
-    position: relative;
+    position: fixed;
     font-size: 60px;
     color:#1FC23A;
-    top: -10px;
-    left: 120px;
+    top: 542px;
+    left: 238px;
     display: inline-block;
+    z-index: 2;
 }
+
 .pilner{
-    position: relative;
+    position: fixed;
     font-size: 60px;
     color:#1FC23A;
-    top: 70px;
-    left: -20px;
+    top: 624px;
+    left: 156px;
     display: inline-block;
+    z-index: 2;
 }
 
 
-.joystick{
+.move{
     position: relative;
-    background-image: url(joystick.svg);
-    height: 70px;
-    width: 70px;
-    left: 105px;
-    top: -5px;
+    background-image: url(move.png);
+    height: 215px;
+    width: 215px;
+    left: 75px;
+    top: 10px;
     display: inline-block;
+    z-index: auto;
 }
 .cat{
     width: 20px;
@@ -214,4 +222,28 @@ body{
     text-align: center;
     padding-top: 20px;
 
+}
+
+.pausad {
+
+    background-image: url(paused.png);
+    
+    
+    width: 237px;
+    height: 109px;
+    background-color:none;
+    font-family: 'Press Start 2P', cursive;
+    
+    z-index: 1000;
+    margin-top: 240px;
+    margin-left: 50px;
+    float: left;
+    position: fixed;
+    text-align: center;
+    padding-top: 0px;
+
+}
+#spelruta_p{
+    line-height: 0pt;
+    margin-top: 0;
 }
