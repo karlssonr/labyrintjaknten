@@ -35,6 +35,11 @@ var monstery = 3;
  var monster3x = 11;
  var monster3y = 12;
 
+  //position monster4
+  var monster4x = 3;
+  var monster4y = 13;
+
+var eastWest4 = 1;
 var eastWest3 = 1;
 var eastWest2 = 1;
 var eastWest  = 1;
@@ -46,6 +51,7 @@ function update() {
     monsterx  = monsterx  + eastWest;
     monster2x = monster2x + eastWest2;
     monster3x = monster3x + eastWest3;
+    monster4y = monster4y + eastWest4;
 
    
     if(bana[monstery][monsterx]  === 1 ){
@@ -65,6 +71,13 @@ function update() {
        
         eastWest3 = eastWest3 * (-1)
         monster3x = monster3x + 2 * eastWest3;
+
+    }
+
+    if(bana[monster4y][monster4x]  === 1 ){
+       
+        eastWest4 = eastWest4 * (-1)
+        monster4y = monster4y + 2 * eastWest4;
 
     }
 
@@ -118,6 +131,11 @@ function draWorld() {
                 continue
             }
 
+            if (y===monster4y&&x===monster4x){
+                document.getElementById("spelruta_p").innerHTML += "<img src='monster.png' class='monster bilder'>";
+                continue
+            }
+
             if (y===katty&&x===kattx){
                 document.getElementById("spelruta_p").innerHTML += "<img src='cat.png' class='cat bilder'>";
                 continue
@@ -142,7 +160,10 @@ function draWorld() {
 
     
 
-if (katty===monstery&&kattx===monsterx){
+if (katty === monstery &&kattx === monsterx ||
+    katty === monster2y&&kattx === monster2x||
+    katty === monster3y&&kattx === monster3x||
+    katty === monster4y&&kattx === monster4x){
     
             isPaused = true;
             var gameover = document.createElement("gameover");
@@ -152,7 +173,7 @@ if (katty===monstery&&kattx===monsterx){
             console.log(gameover.innerHTML);
     }//gameover
 
-    if (katty===9 && kattx===15){
+    if (katty===2 && kattx===1){ //(katty===9 && kattx===15)
         isPaused = true;
         var finish = document.createElement("finish");
         finish.innerHTML = "FINISH";
