@@ -12,6 +12,7 @@ body{
     height: 65px;
     width: 355px;
     top: 50%;
+    box-shadow: 1px 5px 5px rgb(0, 0, 0);
 }
 .level{
     float: left;
@@ -20,6 +21,8 @@ body{
     color: #1FC23A;
     font-family: 'Play', sans-serif;
     margin-left: 15px;
+    text-shadow: 0px 5px 5px rgb(14, 24, 14);
+    
     /* width:30%; */
 }
 
@@ -31,6 +34,7 @@ body{
     top: 15px;
     overflow: visible;
     background-image: url(restart.png);
+    box-shadow: 1px 5px 5px rgb(0, 0, 0);
     
     
 }
@@ -44,19 +48,22 @@ body{
     overflow: visible;
     left: 255px;
     background-image: url(pause.png);
+    box-shadow: 1px 5px 5px rgb(0, 0, 0);
+    
     
 }
 
 
-#home{
-    position: relative;
+.home{
+    position: fixed;
     width: 31px;
     height: 31px;
     
-    top: -47px;
+    top: 16px;
     overflow: visible;
     left: 310px;
     background-image: url(hem.png);
+    box-shadow: 1px 5px 5px rgb(0, 0, 0);
 }
 
 
@@ -64,12 +71,13 @@ body{
 
 .lives{
     float: left;
-    margin-top: 30px;
-    font-size: 20px;
+    margin-top: 20px;
+    font-size: 30px;
     color: #1FC23A;
-    /* font-family: 'Play', sans-serif; */
-    margin-left: 10px;
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Play', sans-serif;
+    margin-left: 15px;
+    /* font-family: 'Press Start 2P', cursive; */
+    text-shadow: 0px 5px 5px rgb(14, 24, 14);
     
 }
 .hjärta{
@@ -89,6 +97,7 @@ body{
     height: 322px;
     margin-top: 75px;
     margin-left: 10px;
+    box-shadow: 1px 2px 5px rgb(0, 0, 0);
     
 }
 .bild{
@@ -106,10 +115,7 @@ body{
 }
 
 
-.pil{
-    text-decoration: none;
-    color: #1FC23A;
-}
+
 .pilvänster{
     position: fixed;
     font-size: 60px;
@@ -129,7 +135,9 @@ body{
     left: 238px;
     display: inline-block;
     z-index: 2;
+    
 }
+
 
 .pilner{
     position: fixed;
@@ -142,16 +150,7 @@ body{
 }
 
 
-.move{
-    position: relative;
-    background-image: url(move.png);
-    height: 215px;
-    width: 215px;
-    left: 75px;
-    top: 10px;
-    display: inline-block;
-    z-index: auto;
-}
+
 .cat{
     width: 20px;
     height: 20px;
@@ -207,6 +206,8 @@ body{
     position: fixed;
     text-align: center;
     padding-top: 20px;
+    color: black;
+    font-size: 20px;
 }
 
 .finish {
@@ -223,6 +224,7 @@ body{
     text-align: center;
     padding-top: 20px;
     color: black;
+    font-size: 20px;
 
 }
 
@@ -248,4 +250,64 @@ body{
 #spelruta_p{
     line-height: 0pt;
     margin-top: 0;
+}
+
+.pil{
+text-decoration: none;
+color: #1FC23A;
+padding-top: 25.92%;
+background-size: 100% 100%;
+color: rgb(49, 243, 10);
+text-shadow: 0px 5px 5px rgb(14, 24, 14);
+
+}
+.move{
+    position: relative;
+    background-image: url(move.png);
+    height: 215px;
+    width: 215px;
+    left: 75px;
+    top: 10px;
+    display: inline-block;
+    z-index: auto;
+    
+    
+}
+
+.logga{
+    position: fixed;
+    background-image: url(logga.png);
+    width: 400px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 0px;
+    
+}
+
+.spela{
+    position: fixed;
+    background-image: url(spela.png);
+    width: 320px;
+    height: 102px;
+    margin-top: 45vh;
+    margin-left: 50px;
+    /* box-shadow: 10px 10px 5px rgb(192, 209, 198); */
+}
+
+.highscore{
+    position: fixed;
+    background-image: url(highscore.png);
+    width: 320px;
+    height: 102px;
+    margin-top: 75vh;
+    margin-left: 50px;
+}
+.settings{
+    position: fixed;
+    background-image: url(settings.png);
+    width: 320px;
+    height: 102px;
+    margin-top: 60vh;
+    margin-left: 50px;
+
 }

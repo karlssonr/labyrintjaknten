@@ -47,6 +47,7 @@ var eastWest  = 1;
 var isPaused  = false;
 
 function update() {
+    console.log(draWorld.innerHTML);
     if (isPaused == false){
     monsterx  = monsterx  + eastWest;
     monster2x = monster2x + eastWest2;
@@ -81,9 +82,24 @@ function update() {
 
     }
 
+
+
     
     draWorld();
- }
+
+    if (katty === monstery &&kattx === monsterx ||
+        katty === monster2y&&kattx === monster2x||
+        katty === monster3y&&kattx === monster3x||
+        katty === monster4y&&kattx === monster4x){
+        
+                isPaused = true;
+                var gameover = document.createElement("gameover");
+                gameover.innerHTML = "GAME OVER";
+                document.body.prepend(gameover);
+                gameover.classList.add("gameover");
+                console.log(gameover.innerHTML);
+        }//gameover
+ }//update
 }
 
 function pause(){
@@ -92,17 +108,21 @@ function pause(){
 
     if (isPaused == true){
         isPaused = false
-        // var pausad = document.createElement("pausad");
-        // pausad.innerHTML = "pausad";
-        // document.body.prepend(pausad);
-        // pausad.classList.add("pausad");
-        // console.log(pausad.innerHTML);
+
     }
     else{
         isPaused = true
     }
     
 }
+
+// while (isPaused == true){
+//         var pausad = document.createElement("pausad");
+//         pausad.innerHTML = "pausad";
+//         document.body.prepend(pausad);
+//         pausad.classList.add("pausad");
+//         console.log(pausad.innerHTML);
+// }
 
 
 
@@ -112,7 +132,8 @@ function pause(){
 
 
 function draWorld() {
-    document.getElementById("spelruta_p").innerHTML = "";
+    
+    document.getElementById("spelruta_p").innerHTML= "";
     for(var y = 0; y < bana.length; y=y+1){
         for(var x=0; x < bana[y].length; x=x+1){
 
@@ -160,31 +181,11 @@ function draWorld() {
 
     
 
-if (katty === monstery &&kattx === monsterx ||
-    katty === monster2y&&kattx === monster2x||
-    katty === monster3y&&kattx === monster3x||
-    katty === monster4y&&kattx === monster4x){
-    
-            isPaused = true;
-            var gameover = document.createElement("gameover");
-            gameover.innerHTML = "GAME OVER";
-            document.body.prepend(gameover);
-            gameover.classList.add("gameover");
-            console.log(gameover.innerHTML);
-    }//gameover
 
-    if (katty===2 && kattx===1){ //(katty===9 && kattx===15)
-        isPaused = true;
-        var finish = document.createElement("finish");
-        finish.innerHTML = "FINISH";
-        document.body.prepend(finish);
-        finish.classList.add("finish");
-        console.log(finish.innerHTML);
-    }//finish
 
-    
 
-    // if (isPaused = true){
+
+    // while (isPaused == true){
 
     //     var pausad = document.createElement("pausad");
         
@@ -193,10 +194,13 @@ if (katty === monstery &&kattx === monsterx ||
     //     console.log(pausad.innerHTML);
         
     // }//pausad
+    
 
 
 
 
+
+   
 
 }//drawworld
 
@@ -205,6 +209,7 @@ if (katty === monstery &&kattx === monsterx ||
 
 
  function move(xdirection,ydirection){
+     console.log(move.innerHTML)
      var nyposx = kattx + xdirection;
      var nyposy = katty + ydirection;
 
@@ -213,7 +218,33 @@ if (katty === monstery &&kattx === monsterx ||
          katty = nyposy ;
         
      }
+     if (katty===9 && kattx===15){ 
+        confetti.start();
+        isPaused = true;
+        var finish = document.createElement("finish");
+        finish.innerHTML = "FINISH";
+        document.body.prepend(finish);
+        finish.classList.add("finish");
+        console.log(finish.innerHTML);
+        
+    }//finish
+
+   
+
+    if (katty === monstery &&kattx === monsterx ||
+        katty === monster2y&&kattx === monster2x||
+        katty === monster3y&&kattx === monster3x||
+        katty === monster4y&&kattx === monster4x){
+        
+                isPaused = true;
+                var gameover = document.createElement("gameover");
+                gameover.innerHTML = "GAME OVER";
+                document.body.prepend(gameover);
+                gameover.classList.add("gameover");
+                console.log(gameover.innerHTML);
+        }//gameover
     
-     
+       // draWorld();
 
 }
+

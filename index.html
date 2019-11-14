@@ -1,73 +1,15 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="design.css">
-        <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
-       
-    </head>
-    <body onload="update(); setInterval('update()', 2000 )">
-        <nav class="topmeny">
-
-                <div class="level">LEVEL: 1</div>
-                <div class="iconrestart"></div>
-                <div class="iconpause" onclick="pause(); "></div>
-                <div id="home"></div>
-
-
-            </nav>
-
-        <div class="lives">LIVES:</div>
-        <span class="hjärta">&hearts;</span>
-        <span class="hjärta">&hearts;</span>
-        <span class="hjärta">&hearts;</span>
-        
-
-        <div id="spelruta"  ><p id="spelruta_p"></p></div>  
-        
-        <!--Start divs för labyrinten-->
-        <!-- <div > <img src="monster.png" class="monster bilder" ></div>
-        <div> <img src="wall.png" class="wall bilder"></div>
-        <div <img src="grå.png" class="marken bilder"></div>
-        <div> <img src="cat.png" class="cat bilder"></div>
-       <div class="mål bilder"></div> -->
-        
-
-        <!--Slut divs för labyrinten-->
-        <div class="move"></div>
-        
-        <div class="pilupp"><a href="#" onclick="move(0,-1);" class="pil">&#129093;</a></div>  
-        <div class="pilvänster"><a href="#" onclick="move(-1,0)" class="pil">&#129092;</a></div>
-        
-        
-        <div class="pilhöger"><a href="#" onclick="move(1,0)" class="pil">&#129094;</a></div>
-        <div class="pilner"><a href="#" onclick="move(0,1)" class="pil">&#129095;</a></div>
-
-        <!-- <div class="gameover">GAME OVER</div> -->
-
-
-        <script src="java.js"></script>
-
-    </body>
-</html>
-
-
-
-                
-
-                
-                
-
-                    
-
-        
-        
-            
-
-        
-
-                 
-
-       
-        
-
+<head>
+    <link rel="stylesheet" href="design.css">
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+   
+</head>
+<body>
+    <div class="logga"></div>
+    <a href="spela.html" class="spela"></a>
+    <a href="" class="settings"></a>
+    <a href="" class="highscore"></a>
+    
+    
+</body>
