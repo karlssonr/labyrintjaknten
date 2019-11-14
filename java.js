@@ -225,6 +225,7 @@ function draWorld() {
         finish.innerHTML = "FINISH";
         document.body.prepend(finish);
         finish.classList.add("finish");
+        confetti.start();
         console.log(finish.innerHTML);
         
     }//finish
