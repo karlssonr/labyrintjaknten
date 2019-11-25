@@ -1,44 +1,13 @@
 
 
-var bana = [
-    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-    [1,2,1,2,2,2,2,2,2,2,2,1,2,2,2,1],
-    [1,2,1,2,1,1,1,1,1,1,2,1,2,1,2,1],
-    [1,2,1,2,1,2,2,2,2,2,2,2,2,1,2,1],
-    [1,2,2,2,1,2,1,1,1,1,1,1,1,1,2,1],
-    [1,2,1,2,1,2,1,2,2,2,2,2,2,2,2,1],
-    [1,2,1,2,2,2,2,2,1,1,1,1,1,1,2,1],
-    [1,2,1,1,1,1,1,1,1,2,2,2,2,2,2,1],
-    [1,2,2,2,1,2,2,2,2,2,1,2,1,1,1,1],
-    [1,1,1,2,1,2,1,1,1,2,1,2,2,1,2,4],
-    [1,2,2,2,1,2,1,2,2,2,1,1,2,2,2,1],
-    [1,2,1,1,1,2,1,2,1,1,1,1,1,1,2,1],
-    [1,2,2,2,2,2,1,2,2,2,2,2,2,2,2,1],
-    [1,2,1,2,1,1,1,2,1,1,1,2,1,1,1,1],
-    [1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1],
-    [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-    
-]
+
+
 //positon katt
 var kattx = 1;
 var katty = 1;
 
-//position monster1
-var monsterx = 8;
-var monstery = 3;
 
-//position monster2
- var monster2x = 14;
- var monster2y = 10;
-
- //position monster3
- var monster3x = 11;
- var monster3y = 12;
-
-  //position monster4
-  var monster4x = 3;
-  var monster4y = 13;
-
+//värdet som plussas på monstrerna varje gång update körs
 var eastWest4 = 1;
 var eastWest3 = 1;
 var eastWest2 = 1;
@@ -46,35 +15,41 @@ var eastWest  = 1;
   
 var isPaused  = false;
 
+
+
+
+//varje gång uppdate körs flyttas monstrerna 1 steg så länge isPased = false
+ 
 function update() {
-    console.log(draWorld.innerHTML);
+    
     if (isPaused == false){
     monsterx  = monsterx  + eastWest;
     monster2x = monster2x + eastWest2;
     monster3x = monster3x + eastWest3;
     monster4y = monster4y + eastWest4;
 
-   
+   //När monster går in i en vägg så körs en formel som gör så att monstret byter håll
     if(bana[monstery][monsterx]  === 1 ){
         eastWest  = eastWest  * (-1)
         monsterx  = monsterx  + 2 * eastWest;
 
 
     }
+    //När monster2 går in i en vägg så körs en formel som gör så att monstret byter håll
     if(bana[monster2y][monster2x]  === 1 ){
        
         eastWest2 = eastWest2 * (-1)
         monster2x = monster2x + 2 * eastWest2;
 
     }
-
+    //När monster3 går in i en vägg så körs en formel som gör så att monstret byter håll
     if(bana[monster3y][monster3x]  === 1 ){
        
         eastWest3 = eastWest3 * (-1)
         monster3x = monster3x + 2 * eastWest3;
 
     }
-
+     //När monster4 går in i en vägg så körs en formel som gör så att monstret byter håll
     if(bana[monster4y][monster4x]  === 1 ){
        
         eastWest4 = eastWest4 * (-1)
@@ -87,6 +62,8 @@ function update() {
     
     draWorld();
 
+
+//Om katten kolliderar ihop med ett monster så skapas en div mitt på skärmen och talar om att spelet är över
     if (katty === monstery &&kattx === monsterx ||
         katty === monster2y&&kattx === monster2x||
         katty === monster3y&&kattx === monster3x||
@@ -116,27 +93,22 @@ function pause(){
     
 }
 
-// while (isPaused == true){
-//         var pausad = document.createElement("pausad");
-//         pausad.innerHTML = "pausad";
-//         document.body.prepend(pausad);
-//         pausad.classList.add("pausad");
-//         console.log(pausad.innerHTML);
-// }
-
-
-
 
 
     
 
-
+//Ritar ut banan
+//1 = vägg
+//2 = marken
+//3 = Mål
 function draWorld() {
-    
+
+
     document.getElementById("spelruta_p").innerHTML= "";
     for(var y = 0; y < bana.length; y=y+1){
         for(var x=0; x < bana[y].length; x=x+1){
 
+            //Den kollar monstrets position i arrayen sedan ritan ut monstret och går vidare till nästa villkor
             if (y===monstery&&x===monsterx){
                 document.getElementById("spelruta_p").innerHTML += "<img src='monster.png' class='monster bilder'>";
                 continue
@@ -179,26 +151,6 @@ function draWorld() {
         
 }//ylength
 
-    
-
-
-
-
-
-    // while (isPaused == true){
-
-    //     var pausad = document.createElement("pausad");
-        
-    //     document.body.prepend(pausad);
-    //     pausad.classList.add("pausad");
-    //     console.log(pausad.innerHTML);
-        
-    // }//pausad
-    
-
-
-
-
 
    
 
@@ -207,7 +159,7 @@ function draWorld() {
 
 
 
-
+//Funktion för pilarna som ger nya värden till kattens pos varje gång man klickar
  function move(xdirection,ydirection){
      console.log(move.innerHTML)
      var nyposx = kattx + xdirection;
@@ -245,7 +197,7 @@ function draWorld() {
                 console.log(gameover.innerHTML);
         }//gameover
     
-       // draWorld();
+        draWorld();
 
 }
 

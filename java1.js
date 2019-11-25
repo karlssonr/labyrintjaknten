@@ -114,13 +114,6 @@ function pause(){
     
 }
 
-// while (isPaused == true){
-//         var pausad = document.createElement("pausad");
-//         pausad.innerHTML = "pausad";
-//         document.body.prepend(pausad);
-//         pausad.classList.add("pausad");
-//         console.log(pausad.innerHTML);
-// }
 
 
 
@@ -134,30 +127,30 @@ function draWorld() {
     for(var y = 0; y < bana.length; y=y+1){
         for(var x=0; x < bana[y].length; x=x+1){
 
-            // if (y===monstery&&x===monsterx){
-            //     document.getElementById("spelruta_p").innerHTML += "<img src='monster.png' class='monster bilder'>";
-            //     continue
-            // }
+            if (y===monstery&&x===monsterx){
+                document.getElementById("spelruta_p").innerHTML += "<img src='monster.png' class='monster bilder'>";
+                continue
+            }
 
-            // if (y===monster2y&&x===monster2x){
-            //     document.getElementById("spelruta_p").innerHTML += "<img src='monster.png' class='monster bilder'>";
-            //     continue
-            // }
+            if (y===monster2y&&x===monster2x){
+                document.getElementById("spelruta_p").innerHTML += "<img src='monster.png' class='monster bilder'>";
+                continue
+            }
 
-            // if (y===monster3y&&x===monster3x){
-            //     document.getElementById("spelruta_p").innerHTML += "<img src='monster.png' class='monster bilder'>";
-            //     continue
-            // }
+            if (y===monster3y&&x===monster3x){
+                document.getElementById("spelruta_p").innerHTML += "<img src='monster.png' class='monster bilder'>";
+                continue
+            }
 
-            // if (y===monster4y&&x===monster4x){
-            //     document.getElementById("spelruta_p").innerHTML += "<img src='monster.png' class='monster bilder'>";
-            //     continue
-            // }
+            if (y===monster4y&&x===monster4x){
+                document.getElementById("spelruta_p").innerHTML += "<img src='monster.png' class='monster bilder'>";
+                continue
+            }
 
-            // if (y===katty&&x===kattx){
-            //     document.getElementById("spelruta_p").innerHTML += "<img src='cat.png' class='cat bilder'>";
-            //     continue
-            // }
+            if (y===katty&&x===kattx){
+                document.getElementById("spelruta_p").innerHTML += "<img src='cat.png' class='cat bilder'>";
+                continue
+            }
 
 
 
@@ -186,15 +179,7 @@ function draWorld() {
 
 
 
-    // while (isPaused == true){
 
-    //     var pausad = document.createElement("pausad");
-        
-    //     document.body.prepend(pausad);
-    //     pausad.classList.add("pausad");
-    //     console.log(pausad.innerHTML);
-        
-    // }//pausad
     
 
 
@@ -227,7 +212,7 @@ function draWorld() {
         console.log(finish.innerHTML);
     }//finish
 
-   //draWorld();
+   draWorld();
 
     if (katty === monstery &&kattx === monsterx ||
         katty === monster2y&&kattx === monster2x||
@@ -246,7 +231,7 @@ function draWorld() {
 
 }
 
-function DrawCat(){
-    document.getElementById("spelruta_p").innerHTML += "<img src='cat.png' class='cat bilder'>";
+// function DrawCat(){
+//     document.getElementById("spelruta_p").innerHTML += "<img src='cat.png' class='cat bilder'>";
     
-}
+// }
